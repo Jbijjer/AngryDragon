@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://ctl8tktymj78u"]
+
+[ext_resource type="Script" path="res://Animal/animal.gd" id="1_1gqcp"]
+[ext_resource type="Texture2D" uid="uid://b2edgbynh5ich" path="res://assets/player/a1.png" id="1_vwy8s"]
+[ext_resource type="AudioStream" uid="uid://c5u1hbhuqn3pj" path="res://assets/audio/stretch2.ogg" id="3_sdq2e"]
+[ext_resource type="AudioStream" uid="uid://cyoutef31bplw" path="res://assets/audio/catapult.ogg" id="4_0ihsn"]
+[ext_resource type="AudioStream" uid="uid://6vqrbb3ytmf2" path="res://assets/audio/kick_wood.ogg" id="5_4y5kb"]
+[ext_resource type="Texture2D" uid="uid://cnssmdfr7i2u5" path="res://assets/items/arrow.png" id="6_jgnsn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hoo36"]
+bounce = 0.2
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_an1bb"]
+radius = 200.0
+height = 459.943
+
+[node name="Animal" type="RigidBody2D" groups=["animal"]]
+input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_hoo36")
+max_contacts_reported = 1
+contact_monitor = true
+freeze = true
+script = ExtResource("1_1gqcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_vwy8s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -5)
+rotation = -1.55509
+scale = Vector2(0.1, 0.1)
+shape = SubResource("CapsuleShape2D_an1bb")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(4, -5)
+scale = Vector2(2.425, 2.225)
+
+[node name="StretchSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_sdq2e")
+
+[node name="LaunchSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_0ihsn")
+
+[node name="CollisionSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_4y5kb")
+
+[node name="ArrowSprite" type="Sprite2D" parent="."]
+position = Vector2(4, -3)
+rotation = -0.909317
+scale = Vector2(0.24106, 0.24106)
+texture = ExtResource("6_jgnsn")
+offset = Vector2(200, 0)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

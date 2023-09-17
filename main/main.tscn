@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://p6p2luhujqj2"]
+
+[ext_resource type="Texture2D" uid="uid://d1l8122604nr1" path="res://assets/env/dragon_castle.jpg" id="1_t8sf8"]
+[ext_resource type="AudioStream" uid="uid://cqtkn4rt1lrhw" path="res://assets/audio/mainmenu.mp3" id="2_hm586"]
+[ext_resource type="LabelSettings" uid="uid://jso5m4onks1s" path="res://assets/LG_72_Title.tres" id="3_f6yki"]
+[ext_resource type="Texture2D" uid="uid://cjd5a8ihkjkis" path="res://assets/env/fire.png" id="3_sws7t"]
+[ext_resource type="PackedScene" uid="uid://bagxx4ejwidhd" path="res://levelbutton/level_button.tscn" id="4_m88dr"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_t8sf8")
+expand_mode = 3
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_hm586")
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(809, 99)
+rotation = 1.62057
+scale = Vector2(1.23661, 1.2374)
+texture = ExtResource("3_sws7t")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(206, 70)
+rotation = -1.52018
+scale = Vector2(1.23661, 1.2374)
+texture = ExtResource("3_sws7t")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 76.0
+grow_horizontal = 2
+rotation = 0.0523599
+theme_override_constants/margin_top = 32
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 72
+text = "ANGRY DRAGON"
+label_settings = ExtResource("3_f6yki")
+
+[node name="HB" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -443.0
+offset_top = 68.0
+offset_right = 101.0
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 48
+
+[node name="LevelButton" parent="HB" instance=ExtResource("4_m88dr")]
+layout_mode = 2
+
+[node name="LevelButton2" parent="HB" instance=ExtResource("4_m88dr")]
+layout_mode = 2
+level_number = 2
+
+[node name="LevelButton3" parent="HB" instance=ExtResource("4_m88dr")]
+layout_mode = 2
+level_number = 3
+
+[node name="LevelButton4" parent="HB" instance=ExtResource("4_m88dr")]
+layout_mode = 2
+level_number = 4
+
+[node name="HB2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -442.0
+offset_top = 190.0
+offset_right = 102.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 48
+
+[node name="LevelButton" parent="HB2" instance=ExtResource("4_m88dr")]
+layout_mode = 2
+level_number = 5
