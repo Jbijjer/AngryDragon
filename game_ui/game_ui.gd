@@ -27,3 +27,7 @@ func on_game_over() -> void:
 	vb_2.show()
 	sound.play()
 	
+
+
+func _on_texture_button_pressed():
+	GameManager.load_main_scene()

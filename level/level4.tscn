@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://iii8bvuxods"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_dao3k"]
-[ext_resource type="Texture2D" uid="uid://5c40rkqetfbp" path="res://assets/env/landscape-castles-river-wallpaper-preview.jpg" id="2_ee2el"]
+[ext_resource type="Texture2D" uid="uid://dg21lxxn0yxtc" path="res://assets/env/castle_fantasy_river_163607_2560x1600.jpg" id="2_vuf5o"]
 [ext_resource type="PackedScene" uid="uid://wbv02dpv38tr" path="res://game_ui/game_ui.tscn" id="3_t7okq"]
 [ext_resource type="PackedScene" uid="uid://cle4qp74w6t0u" path="res://launch_area/launch_area.tscn" id="4_2h0tc"]
 [ext_resource type="AudioStream" uid="uid://hduwcbsqwpkt" path="res://assets/audio/birdsong.wav" id="5_6xlkn"]
@@ -15,9 +15,9 @@ font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
 script = ExtResource("1_dao3k")
 
 [node name="ColoredCastle" type="Sprite2D" parent="."]
-position = Vector2(496, 320)
-scale = Vector2(1.24, 1.24)
-texture = ExtResource("2_ee2el")
+position = Vector2(689, 432)
+scale = Vector2(0.546199, 0.546199)
+texture = ExtResource("2_vuf5o")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(512, 300)

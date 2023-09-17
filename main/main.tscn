@@ -1,10 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://p6p2luhujqj2"]
+[gd_scene load_steps=8 format=3 uid="uid://p6p2luhujqj2"]
 
 [ext_resource type="Texture2D" uid="uid://d1l8122604nr1" path="res://assets/env/dragon_castle.jpg" id="1_t8sf8"]
 [ext_resource type="AudioStream" uid="uid://cqtkn4rt1lrhw" path="res://assets/audio/mainmenu.mp3" id="2_hm586"]
 [ext_resource type="LabelSettings" uid="uid://jso5m4onks1s" path="res://assets/LG_72_Title.tres" id="3_f6yki"]
 [ext_resource type="Texture2D" uid="uid://cjd5a8ihkjkis" path="res://assets/env/fire.png" id="3_sws7t"]
 [ext_resource type="PackedScene" uid="uid://bagxx4ejwidhd" path="res://levelbutton/level_button.tscn" id="4_m88dr"]
+[ext_resource type="FontFile" uid="uid://b2thc74ovgbtf" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="6_vg25d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c2ygo"]
+font = ExtResource("6_vg25d")
+font_size = 24
+font_color = Color(0.0823529, 1, 0.027451, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(1, 1, 0, 0.392157)
+shadow_offset = Vector2(3, 3)
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -104,3 +115,15 @@ theme_override_constants/separation = 48
 [node name="LevelButton" parent="HB2" instance=ExtResource("4_m88dr")]
 layout_mode = 2
 level_number = 5
+
+[node name="Label" type="Label" parent="."]
+offset_left = 526.0
+offset_top = 534.0
+offset_right = 1039.0
+offset_bottom = 610.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 72
+text = "Fun-Play-Games Inc,        "
+label_settings = SubResource("LabelSettings_c2ygo")
+horizontal_alignment = 2
+vertical_alignment = 1

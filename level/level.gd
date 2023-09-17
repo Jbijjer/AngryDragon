@@ -31,3 +31,8 @@ func on_animal_died() -> void:
 	var animal = animal_scene.instantiate()
 	animal.global_position = animal_start.global_position
 	add_child(animal)
+
+
+func _on_texture_button_pressed():
+	print("Ayoye!")
+	GameManager.load_main_scene()
