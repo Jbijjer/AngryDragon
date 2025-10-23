@@ -64,8 +64,13 @@ func get_best_for_level(level: int) -> int:
 func get_stars_for_level(level: int) -> int:
 	check_and_add(level)
 	return _level_stars[level]
-	
-	
+
+
+func is_level_completed(level: int) -> bool:
+	check_and_add(level)
+	return _level_stars[level] > 0
+
+
 func get_attempts() -> int:
 	return _attempts
 	
