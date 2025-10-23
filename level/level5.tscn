@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b47ukml6d2ixm"]
+[gd_scene load_steps=12 format=3 uid="uid://b47ukml6d2ixm"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_1fgxg"]
 [ext_resource type="Texture2D" uid="uid://dg21lxxn0yxtc" path="res://assets/env/castle_fantasy_river_163607_2560x1600.jpg" id="2_4vdga"]
@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://cle4qp74w6t0u" path="res://launch_area/launch_area.tscn" id="4_rgtv8"]
 [ext_resource type="AudioStream" uid="uid://hduwcbsqwpkt" path="res://assets/audio/birdsong.wav" id="5_p3xnc"]
 [ext_resource type="PackedScene" uid="uid://b4b7j7pyqi26" path="res://cup.tscn" id="6_0ghaa"]
+[ext_resource type="Texture2D" path="res://assets/kenney_platformer/Tiles/tile_0096.png" id="7_tree"]
+[ext_resource type="Texture2D" path="res://assets/kenney_platformer/Tiles/tile_0070.png" id="8_cactus"]
+[ext_resource type="Texture2D" path="res://assets/kenney_platformer/Tiles/tile_0064.png" id="9_plant"]
+[ext_resource type="Texture2D" path="res://assets/kenney_platformer/Tiles/tile_0068.png" id="10_rock"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g6qbe"]
 font_size = 20
@@ -18,6 +22,40 @@ script = ExtResource("1_1fgxg")
 position = Vector2(668, 417)
 scale = Vector2(0.520625, 0.520625)
 texture = ExtResource("2_4vdga")
+modulate = Color(0.9, 0.8, 1, 1)
+
+[node name="BackgroundMix" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Tree1" type="Sprite2D" parent="BackgroundMix"]
+position = Vector2(120, 420)
+scale = Vector2(3, 3)
+texture = ExtResource("7_tree")
+
+[node name="Plant1" type="Sprite2D" parent="BackgroundMix"]
+position = Vector2(280, 450)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("9_plant")
+
+[node name="Cactus1" type="Sprite2D" parent="BackgroundMix"]
+position = Vector2(420, 440)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("8_cactus")
+
+[node name="Rock1" type="Sprite2D" parent="BackgroundMix"]
+position = Vector2(580, 455)
+scale = Vector2(2, 2)
+texture = ExtResource("10_rock")
+
+[node name="Tree2" type="Sprite2D" parent="BackgroundMix"]
+position = Vector2(720, 425)
+scale = Vector2(3, 3)
+texture = ExtResource("7_tree")
+
+[node name="Plant2" type="Sprite2D" parent="BackgroundMix"]
+position = Vector2(880, 445)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("9_plant")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(512, 300)

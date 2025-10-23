@@ -1,15 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://gk7ed8yefnpn"]
+[gd_scene load_steps=5 format=3 uid="uid://gk7ed8yefnpn"]
 
 [ext_resource type="PackedScene" uid="uid://cw74x8l5e4438" path="res://level/level.tscn" id="1_g6c4t"]
 [ext_resource type="PackedScene" uid="uid://b4b7j7pyqi26" path="res://cup.tscn" id="2_4103j"]
+[ext_resource type="Texture2D" path="res://assets/kenney_platformer/Tiles/tile_0070.png" id="3_cactus"]
+[ext_resource type="Texture2D" path="res://assets/kenney_platformer/Tiles/tile_0068.png" id="4_rock"]
 
 [node name="Level3" instance=ExtResource("1_g6c4t")]
 
-[node name="Cup" parent="." index="5" instance=ExtResource("2_4103j")]
+[node name="ColoredCastle" parent="." index="1"]
+modulate = Color(1, 0.9, 0.6, 1)
+
+[node name="BackgroundDesert" type="Node2D" parent="." index="2"]
+z_index = -1
+
+[node name="Cactus1" type="Sprite2D" parent="BackgroundDesert" index="0"]
+position = Vector2(250, 425)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_cactus")
+
+[node name="Rock1" type="Sprite2D" parent="BackgroundDesert" index="1"]
+position = Vector2(400, 450)
+scale = Vector2(2, 2)
+texture = ExtResource("4_rock")
+
+[node name="Cactus2" type="Sprite2D" parent="BackgroundDesert" index="2"]
+position = Vector2(600, 435)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_cactus")
+
+[node name="Rock2" type="Sprite2D" parent="BackgroundDesert" index="3"]
+position = Vector2(800, 455)
+scale = Vector2(2, 2)
+texture = ExtResource("4_rock")
+
+[node name="Cup" parent="." index="6" instance=ExtResource("2_4103j")]
 position = Vector2(530, 269)
 
-[node name="Cup2" parent="." index="6" instance=ExtResource("2_4103j")]
+[node name="Cup2" parent="." index="7" instance=ExtResource("2_4103j")]
 position = Vector2(400, 400)
 
-[node name="Cup3" parent="." index="7" instance=ExtResource("2_4103j")]
+[node name="Cup3" parent="." index="8" instance=ExtResource("2_4103j")]
 position = Vector2(713, 318)
