@@ -1,0 +1,31 @@
+{
+	"_comment": "Star thresholds for each level. Format: [attempts_for_3_stars, attempts_for_2_stars]",
+	"_info": "If attempts <= 3_stars: get 3 stars | If attempts <= 2_stars: get 2 stars | Otherwise: get 1 star",
+	"levels": {
+		"1": {
+			"three_stars": 3,
+			"two_stars": 5,
+			"description": "Level 1 - Tutorial level"
+		},
+		"2": {
+			"three_stars": 4,
+			"two_stars": 6,
+			"description": "Level 2"
+		},
+		"3": {
+			"three_stars": 5,
+			"two_stars": 8,
+			"description": "Level 3"
+		},
+		"4": {
+			"three_stars": 6,
+			"two_stars": 10,
+			"description": "Level 4"
+		},
+		"5": {
+			"three_stars": 7,
+			"two_stars": 12,
+			"description": "Level 5 - Final level"
+		}
+	}
+}
